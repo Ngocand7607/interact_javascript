@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f8;
+  color: #1a1a1a;
+}
+
+h1 { text-align: center; color: #1f3a5f; }
+.intro { text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 16px; }
+
+/* Khung ảnh lớn */
+#image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  margin: 0 auto 24px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 5px solid #1f3a5f;
+  border-radius: 12px;
+  background-color: #1f3a5f;      /* nền tối + chữ trắng để đủ tương phản */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+/* Chữ mô tả có nền mờ để luôn đọc được trên mọi ảnh */
+.caption {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+/* Ảnh nhỏ */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.preview {
+  width: 30%;
+  min-width: 140px;
+  max-width: 220px;
+  height: auto;
+  border: 5px solid #1f3a5f;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .3s, border-color .3s;
+}
+
+.preview:hover,
+.preview:focus {
+  transform: scale(1.06);
+  border-color: #ffb800;
+}
+
+/* Viền focus rõ ràng cho người dùng bàn phím */
+.preview:focus {
+  outline: 4px solid #ff6b00;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preview { transition: none; }
+  .preview:hover, .preview:focus { transform: none; }
+}

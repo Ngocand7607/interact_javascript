@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Photo Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body onload="addTabFocus()">
+  <header>
+    <h1>My Interactive Photo Gallery</h1>
+  </header>
+
+  <main>
+    <p class="intro">Move your mouse over a picture, or press the Tab key to move between pictures. The big box shows the description of the picture you choose.</p>
+
+    <div id="image" aria-live="polite">Hover over or focus on an image below to display it here.</div>
+
+    <section class="gallery" aria-label="Photo thumbnails">
+      <img class="preview" src="images/v.png" alt="A Viet Nam flag" width="300" height="200"
+        onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="images/c.png" alt="A picture with the world Coding" width="300" height="200"
+        onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="images/soccer.jpg" alt="A picture with the world soccer" width="300" height="200"
+        onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="images/sleeping.jpg" alt="A picture of a boy is sleeping" width="300" height="200"
+        onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="images/Java.png" alt="The second programming language that I am learning" width="300" height="200"
+        onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+      <img class="preview" src="images/html.jpg" alt="A picture of rain" width="300" height="200"
+        onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+    </section>
+  </main>
+</body>
+
+</html>
